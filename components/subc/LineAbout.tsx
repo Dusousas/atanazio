@@ -27,11 +27,11 @@ const FeatureItem: React.FC<FeatureItemProps> = ({ number, title, Icon }) => {
           {num}
         </span>
         <Icon
-          className="col-start-1 row-start-1 text-[clamp(28px,5vw,50px)] transition-transform duration-300 group-hover:-translate-y-1"
+          className="col-start-1 text-white row-start-1 text-[clamp(28px,5vw,50px)] transition-transform duration-300 group-hover:-translate-y-1"
           aria-hidden
         />
       </div>
-      <h4 className="mt-2 text-center font-semibold uppercase tracking-wide">
+      <h4 className="mt-2 text-center text-white font-semibold uppercase tracking-wide">
         {title}
       </h4>
     </div>

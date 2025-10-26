@@ -13,7 +13,7 @@ export default function About() {
 
           <div className="lg:w-1/2">
             <h3 className="uppercase text-sm text-AmareloP text-center lg:text-left">Sobre nós</h3>
-            <h1 className="text-2xl uppercase mt-2 text-center lg:text-left lg:text-4xl">
+            <h1 className="text-2xl uppercase mt-2 text-center text-white lg:text-left lg:text-4xl">
               Locação e serviços de máquinas pesadas
             </h1>
             <p className="font-extralight text-sm  mt-4 text-gray-300 text-center lg:text-left">
@@ -27,23 +27,23 @@ export default function About() {
               <FaBuilding className="text-AmareloP text-3xl " />
               <div>
                 <h3 className="uppercase text-sm text-AmareloP">Serviço 1</h3>
-                <h2>Occupational Safety and Health Administration</h2>
+                <h2 className="text-white">Occupational Safety and Health Administration</h2>
               </div>
             </div>
 
             <div className="flex mt-4 items-center gap-4 border-b border-white/20 pb-4">
               <FaBuilding className="text-AmareloP text-3xl" />
               <div>
-                <h3 className="uppercase text-sm text-AmareloP">Serviço 1</h3>
-                <h2>Occupational Safety and Health Administration</h2>
+                <h3 className="uppercase text-sm text-AmareloP">Serviço 2</h3>
+                <h2 className="text-white">Occupational Safety and Health Administration</h2>
               </div>
             </div>
 
             <div className="flex mt-4 items-center gap-4 border-b border-white/20 pb-4">
               <FaBuilding className="text-AmareloP text-3xl" />
               <div>
-                <h3 className="uppercase text-sm text-AmareloP">Serviço 1</h3>
-                <h2>Occupational Safety and Health Administration</h2>
+                <h3 className="uppercase text-sm text-AmareloP">Serviço 3</h3>
+                <h2 className="text-white">Occupational Safety and Health Administration</h2>
               </div>
             </div>
           </div>
