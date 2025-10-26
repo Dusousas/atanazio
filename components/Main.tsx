@@ -3,7 +3,7 @@ import React from "react";
 export default function Main() {
   return (
     <>
-      <section className="bgMain py-20">
+      <section id="home" className="bgMain py-20">
         <div className="maxW flex flex-col justify-between items-center h-full gap-10 lg:flex-row">
           <div className="lg:w-1/2">
             <h1 className="text-CinzaP font-bold uppercase text-center text-4xl lg:text-left lg:text-7xl">

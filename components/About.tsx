@@ -5,7 +5,7 @@ import LineAbout from "./subc/LineAbout";
 export default function About() {
   return (
     <>
-      <section className="py-20 bg-CinzaP">
+      <section id="about" className="py-20 bg-CinzaP">
         <div className="maxW flex flex-col-reverse justify-center items-center gap-15 lg:flex-row">
           <div className="lg:w-1/2">
             <img src="/about.jpg" alt="" />

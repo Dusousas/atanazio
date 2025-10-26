@@ -46,7 +46,7 @@ const services: ServiceItem[] = [
 export default function Services() {
   return (
     <>
-      <section className="bgService py-20">
+      <section id="services" className="bgService py-20">
         <div className="maxW">
           <h3 className="text-CinzaP uppercase text-center font-bold tracking-wider">
             Soluções Completas
