@@ -1,10 +1,17 @@
+import About from "@/components/About";
+import Faq from "@/components/Faq";
 import Main from "@/components/Main";
-import Image from "next/image";
+import Services from "@/components/Services";
+
 
 export default function Home() {
   return (
     <>
-    <Main />
+      <Main />
+      <About />
+      <Services />
+      <Faq />
+
     </>
   );
 }

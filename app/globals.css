@@ -34,7 +34,6 @@ body {
 
 .bgMain{
   background-image: url('/img_2.png');
-  height: 75vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -58,6 +57,36 @@ body {
 
 /* garante que o conteúdo fique acima do overlay */
 .bgMain > *{
+  position: relative;
+  z-index: 1;
+}
+
+
+.bgService{
+  background-image: url('/service.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;           /* necessário para o ::after */
+  overflow: hidden;             /* evita vazamentos em layouts específicos */
+}
+
+/* Overlay por cima do bg */
+.bgService::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    var(--e-global-color-c94d9ab, #F8D244) 0%,
+    #F3A814CC 100%
+  );
+  pointer-events: none;         /* não bloqueia cliques no conteúdo */
+  z-index: 0;
+}
+
+/* garante que o conteúdo fique acima do overlay */
+.bgService > *{
   position: relative;
   z-index: 1;
 }
