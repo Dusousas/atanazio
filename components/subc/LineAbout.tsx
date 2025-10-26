@@ -40,10 +40,13 @@ const FeatureItem: React.FC<FeatureItemProps> = ({ number, title, Icon }) => {
 
 const LineAbout: React.FC = () => {
   const items: FeatureItemProps[] = [
-    { number: 1, title: "locação de máquinas", Icon: FaTractor },
-    { number: 2, title: "manutenção especializada", Icon: FaWrench },
-    { number: 3, title: "logística e transporte", Icon: FaTruck },
-    { number: 4, title: "insumos e sementes", Icon: FaSeedling },
+    { number: 1, title: "Locação de máquinas", Icon: FaTractor },
+    { number: 2, title: "Terraplanagem", Icon: FaWrench },
+    { number: 3, title: "Destocas", Icon: FaTruck },
+    { number: 4, title: "Demolições", Icon: FaSeedling },
+    { number: 5, title: "Limpeza e construção de represa", Icon: FaSeedling },
+    { number: 6, title: "Curvas de nível", Icon: FaSeedling },
+
     // adicione mais itens...
   ];
 

@@ -150,7 +150,7 @@ export default function Faq() {
         }
       `}</style>
 
-      <section id="faq" className="bg-[#1f1f1f] py-20">
+      <section id="faq" className="bg-CinzaP border-t border-white/20 py-20">
         <div className="max-w-7xl mx-auto px-4">
           <h3 className="text-white uppercase text-center tracking-wider">
             Alguma dúvida?
