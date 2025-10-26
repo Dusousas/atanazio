@@ -1,5 +1,6 @@
 import React from "react";
 import Form from "./subc/Form";
+import { FaInstagramSquare } from "react-icons/fa";
 
 export default function Contact() {
   return (
@@ -31,7 +32,7 @@ export default function Contact() {
               </div>
 
               {/* ADICIONAR ENDEREÇO, EMAIÇ,, TELEFONE, REDES SOCIAIS */}
-              <div className="bg-[#454342] p-10 lg:w-1/2">
+              <div className="bg-[#454342] p-10 relative lg:w-1/2">
                 <h3 className="uppercase text-sm text-AmareloP mb-2">
                   SEND US A MESSAGE
                 </h3>
@@ -57,14 +58,9 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold mb-1 text-white">
-                        Head Office
+                        Endereço
                       </h3>
-                      <p className="text-gray-400 text-sm">
-                        Cempaka Wangi No 22
-                      </p>
-                      <p className="text-gray-400 text-sm">
-                        Jakarta - Indonesia
-                      </p>
+                      <p className="text-gray-400 text-sm">Seu endereço, 123</p>
                     </div>
                   </div>
 
@@ -82,13 +78,10 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold mb-1 text-white">
-                        Email Support
+                        Email
                       </h3>
                       <p className="text-gray-400 text-sm">
-                        Cempaka Wangi No 22
-                      </p>
-                      <p className="text-gray-400 text-sm">
-                        Jakarta - Indonesia
+                        atanazio@dominio.com
                       </p>
                     </div>
                   </div>
@@ -105,33 +98,18 @@ export default function Contact() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold mb-1 text-white">Let's Talk</h3>
-                      <p className="text-gray-400 text-sm">
-                        Phone : (+6221) 2002 2012
-                      </p>
-                      <p className="text-gray-400 text-sm">
-                        Fax : (+6221) 2002 2013
-                      </p>
+                      <h3 className="text-xl font-semibold mb-1 text-white">
+                        Telefone
+                      </h3>
+                      <p className="text-gray-400 text-sm">(14) 0000-000</p>
                     </div>
                   </div>
                 </div>
 
-                {/* Hours */}
-                <div className="border-t border-gray-600 pt-6 flex items-center gap-3">
-                  <div className="bg-AmareloP rounded-full p-3 flex-shrink-0">
-                    <svg
-                      className="w-5 h-5 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                 
+                <div className="flex">
+                  <FaInstagramSquare className="absolute bottom-4 left-10 text-2xl text-AmareloP" />
+                  <FaInstagramSquare className="absolute bottom-4 left-18 text-2xl text-AmareloP" />
+
                 </div>
               </div>
             </article>
