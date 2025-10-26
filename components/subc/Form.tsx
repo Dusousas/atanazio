@@ -11,28 +11,28 @@ export default function Form() {
       <form className="mt-6" action="">
         <div className="flex gap-4 max-sm:flex-col">
           <div className="w-full">
-            <label htmlFor="nome">Nome</label>
+            <label className="text-white" htmlFor="nome">Nome</label>
             <input className={inputBase} type="text" id="nome" name="nome" />
           </div>
           <div className="w-full">
-            <label htmlFor="empresa">Empresa</label>
+            <label className="text-white" htmlFor="empresa">Empresa</label>
             <input className={inputBase} type="text" id="empresa" name="empresa" />
           </div>
         </div>
 
         <div className="flex gap-4 mt-4 max-sm:flex-col">
           <div className="w-full">
-            <label htmlFor="telefone">Telefone</label>
+            <label className="text-white" htmlFor="telefone">Telefone</label>
             <input className={inputBase} type="tel" id="telefone" name="telefone" />
           </div>
           <div className="w-full">
-            <label htmlFor="email">Email</label>
+            <label className="text-white" htmlFor="email">Email</label>
             <input className={inputBase} type="email" id="email" name="email" />
           </div>
         </div>
 
         <div className="mt-4">
-          <label htmlFor="mensagem">Mensagem</label>
+          <label className="text-white" htmlFor="mensagem">Mensagem</label>
           <textarea
             className={`${inputBase} resize-none`}
             rows={4}
