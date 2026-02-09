@@ -17,7 +17,7 @@ export default function Contact() {
             <article className="py-20 flex flex-col justify-center items-center gap-20 lg:flex-row">
               <div className="lg:w-1/2">
                 <h3 className="uppercase text-sm text-AmareloP text-center lg:text-left">
-                  Sobre nós
+                  Alguma dúvida?
                 </h3>
                 <h1 className="text-2xl text-white uppercase mt-2 text-center lg:text-left lg:text-4xl">
                   Entre em contato
@@ -34,7 +34,7 @@ export default function Contact() {
               {/* ADICIONAR ENDEREÇO, EMAIÇ,, TELEFONE, REDES SOCIAIS */}
               <div className="bg-[#454342] p-10 relative lg:w-1/2">
                 <h3 className="uppercase text-sm text-AmareloP mb-2">
-                  SEND US A MESSAGE
+                  Entre em contato
                 </h3>
                 <h1 className="text-3xl mt-2 mb-8 text-white">
                   Don't hesitate to contact us for more information.
@@ -60,7 +60,7 @@ export default function Contact() {
                       <h3 className="text-xl font-semibold mb-1 text-white">
                         Endereço
                       </h3>
-                      <p className="text-gray-400 text-sm">Seu endereço, 123</p>
+                      <p className="text-gray-400 text-sm">Brotas, SP</p>
                     </div>
                   </div>
 
@@ -81,7 +81,7 @@ export default function Contact() {
                         Email
                       </h3>
                       <p className="text-gray-400 text-sm">
-                        atanazio@dominio.com
+                        contact@atanazioterraplanagem.com.br
                       </p>
                     </div>
                   </div>
@@ -101,7 +101,7 @@ export default function Contact() {
                       <h3 className="text-xl font-semibold mb-1 text-white">
                         Telefone
                       </h3>
-                      <p className="text-gray-400 text-sm">(14) 0000-000</p>
+                      <p className="text-gray-400 text-sm">(14) 99679-4593</p>
                     </div>
                   </div>
                 </div>

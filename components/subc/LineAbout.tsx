@@ -1,15 +1,20 @@
 "use client";
 
 import React from "react";
-import { FaTractor, FaWrench, FaTruck, FaSeedling } from "react-icons/fa";
 import type { IconType } from "react-icons";
+import {
+  FaTractor,
+  FaWrench,
+  FaTruck,
+  FaWater,
+  FaMountain,
+  FaTools,
+} from "react-icons/fa";
 
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 
 type FeatureItemProps = {
   number: number;
@@ -26,11 +31,13 @@ const FeatureItem: React.FC<FeatureItemProps> = ({ number, title, Icon }) => {
         <span className="col-start-1 row-start-1 font-extrabold leading-none text-white/10 text-[clamp(72px,10vw,120px)] select-none">
           {num}
         </span>
+
         <Icon
-          className="col-start-1 text-white row-start-1 text-[clamp(28px,5vw,50px)] transition-transform duration-300 group-hover:-translate-y-1"
+          className="col-start-1 row-start-1 text-white text-[clamp(28px,5vw,50px)] transition-transform duration-300 group-hover:-translate-y-1"
           aria-hidden
         />
       </div>
+
       <h4 className="mt-2 text-center text-white font-semibold uppercase tracking-wide">
         {title}
       </h4>
@@ -40,14 +47,36 @@ const FeatureItem: React.FC<FeatureItemProps> = ({ number, title, Icon }) => {
 
 const LineAbout: React.FC = () => {
   const items: FeatureItemProps[] = [
-    { number: 1, title: "Locação de máquinas", Icon: FaTractor },
-    { number: 2, title: "Terraplanagem", Icon: FaWrench },
-    { number: 3, title: "Destocas", Icon: FaTruck },
-    { number: 4, title: "Demolições", Icon: FaSeedling },
-    { number: 5, title: "Limpeza e construção de represa", Icon: FaSeedling },
-    { number: 6, title: "Curvas de nível", Icon: FaSeedling },
-
-    // adicione mais itens...
+    {
+      number: 1,
+      title: "Terraplanagem",
+      Icon: FaTractor,
+    },
+    {
+      number: 2,
+      title: "Destocas",
+      Icon: FaWrench,
+    },
+    {
+      number: 3,
+      title: "Demolições",
+      Icon: FaTruck,
+    },
+    {
+      number: 4,
+      title: "Limpeza e construção de represa",
+      Icon: FaWater,
+    },
+    {
+      number: 5,
+      title: "Curvas de nível",
+      Icon: FaMountain,
+    },
+    {
+      number: 6,
+      title: "Locação de máquinas leves e pesadas",
+      Icon: FaTools,
+    },
   ];
 
   return (
@@ -66,12 +95,12 @@ const LineAbout: React.FC = () => {
           }}
           className="!px-2"
         >
-          {items.map((it) => (
-            <SwiperSlide key={it.number} className="!flex justify-center">
+          {items.map((item) => (
+            <SwiperSlide key={item.number} className="!flex justify-center">
               <FeatureItem
-                number={it.number}
-                title={it.title}
-                Icon={it.Icon}
+                number={item.number}
+                title={item.title}
+                Icon={item.Icon}
               />
             </SwiperSlide>
           ))}
