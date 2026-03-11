@@ -32,7 +32,7 @@ export default function Contact() {
               </div>
 
               {/* ADICIONAR ENDEREÇO, EMAIÇ,, TELEFONE, REDES SOCIAIS */}
-              <div className="bg-[#454342] p-10 relative lg:w-1/2">
+              <div className="bg-[#454342] w-full p-10 relative lg:w-1/2">
                 <h3 className="uppercase text-sm text-AmareloP mb-2">
                   Entre em contato
                 </h3>
@@ -66,7 +66,7 @@ export default function Contact() {
 
                   {/* Email Support */}
                   <div className="flex items-start gap-4 mb-8">
-                    <div className="bg-AmareloP p-4 flex-shrink-0">
+                    <div className="bg-AmareloP p-4 ">
                       <svg
                         className="w-6 h-6 text-white"
                         fill="currentColor"
@@ -76,7 +76,7 @@ export default function Contact() {
                         <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                       </svg>
                     </div>
-                    <div>
+                    <div className="flex flex-col">
                       <h3 className="text-xl font-semibold mb-1 text-white">
                         Email
                       </h3>

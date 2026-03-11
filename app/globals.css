@@ -26,6 +26,10 @@ body {
   font-family: var(--font-sans);
 }
 
+body,html{
+  overflow-x: hidden;
+}
+
 .maxW{
   max-width: 1420px;
   padding: 0 2%;
