@@ -50,7 +50,7 @@ export default function Navbar(): JSX.Element {
           <li>
             <button
               type="button"
-              className="hover:opacity-70 cursor-pointer uppercase"
+              className="hover:opacity-70 cursor-pointer uppercase btn-cta"
               onClick={() => handleNavigation("/", "home")}
             >
               Início
@@ -59,7 +59,7 @@ export default function Navbar(): JSX.Element {
           <li>
             <button
               type="button"
-              className="hover:opacity-70  uppercase cursor-pointer "
+              className="hover:opacity-70  uppercase cursor-pointer btn-cta"
               onClick={() => handleNavigation("/", "about")}
             >
               Sobre
@@ -68,7 +68,7 @@ export default function Navbar(): JSX.Element {
           <li>
             <button
               type="button"
-              className="hover:opacity-70  uppercase cursor-pointer"
+              className="hover:opacity-70  uppercase cursor-pointer btn-cta"
               onClick={() => handleNavigation("/", "services")}
             >
               Serviços
@@ -77,7 +77,7 @@ export default function Navbar(): JSX.Element {
           <li>
             <button
               type="button"
-              className="hover:opacity-70  uppercase cursor-pointer"
+              className="hover:opacity-70  uppercase cursor-pointer btn-cta"
               onClick={() => handleNavigation("/", "faq")}
             >
               Perguntas Frequentes
@@ -86,7 +86,7 @@ export default function Navbar(): JSX.Element {
           <li>
             <button
               type="button"
-              className="hover:opacity-70  uppercase cursor-pointer"
+              className="hover:opacity-70  uppercase cursor-pointer btn-cta"
               onClick={() => handleNavigation("/", "contact")}
             >
               Contato
@@ -100,7 +100,7 @@ export default function Navbar(): JSX.Element {
         <button
           type="button"
           aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
-          className="text-3xl text-CinzaP uppercase focus:outline-none relative z-50"
+          className="text-3xl text-CinzaP uppercase focus:outline-none relative z-50 btn-cta"
           onClick={() => setIsOpen((v) => !v)}
         >
           {isOpen ? <FiX /> : <FiMenu />}
@@ -115,7 +115,7 @@ export default function Navbar(): JSX.Element {
             <li>
               <button
                 type="button"
-                className="uppercase hover:opacity-70  uppercase"
+                className="uppercase hover:opacity-70  uppercase btn-cta"
                 onClick={() => handleNavigation("/", "home")}
               >
                 Início
@@ -124,7 +124,7 @@ export default function Navbar(): JSX.Element {
             <li>
               <button
                 type="button"
-                className="uppercase hover:opacity-70  uppercase"
+                className="uppercase hover:opacity-70  uppercase btn-cta"
                 onClick={() => handleNavigation("/", "about")}
               >
                 Sobre
@@ -133,7 +133,7 @@ export default function Navbar(): JSX.Element {
             <li>
               <button
                 type="button"
-                className="uppercase hover:opacity-70  uppercase"
+                className="uppercase hover:opacity-70  uppercase btn-cta"
                 onClick={() => handleNavigation("/", "services")}
               >
                 Serviços
@@ -142,7 +142,7 @@ export default function Navbar(): JSX.Element {
             <li>
               <button
                 type="button"
-                className="uppercase hover:opacity-70  uppercase"
+                className="uppercase hover:opacity-70  uppercase btn-cta"
                 onClick={() => handleNavigation("/", "faq")}
               >
                 Perguntas Frequentes
@@ -151,7 +151,7 @@ export default function Navbar(): JSX.Element {
             <li>
               <button
                 type="button"
-                className="uppercase hover:opacity-70  uppercase"
+                className="uppercase hover:opacity-70  uppercase btn-cta"
                 onClick={() => handleNavigation("/", "contact")}
               >
                 Contato

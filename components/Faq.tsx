@@ -6,27 +6,27 @@ type FAQItem = { question: string; answer: string };
 
 const faqs: FAQItem[] = [
   {
-    question: "Augue feugiat fames tincidunt class erat pulvinar?",
+    question: "Quais serviços de terraplanagem vocês realizam?",
     answer:
-      "Eros cubilia dui maecenas et facilisis at. Curae lacinia accumsan vulputate natoque ut luctus inceptos.",
+      "Realizamos serviços completos de terraplanagem para obras rurais e urbanas, incluindo nivelamento de terrenos, preparação de áreas para construção, abertura de estradas, loteamentos e infraestrutura. Trabalhamos com máquinas modernas e equipe especializada para garantir eficiência, segurança e qualidade em cada projeto.",
   },
   {
-    question: "Condimentum sodales congue senectus tristique netus?",
-    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    question: "Vocês fazem limpeza de represas e barramentos?",
+    answer: "Sim. Executamos limpeza e desassoreamento de represas, açudes e barramentos, removendo sedimentos, vegetação e materiais acumulados. Esse serviço ajuda a aumentar a capacidade de armazenamento de água e melhorar o funcionamento da represa.",
   },
   {
-    question: "Tempus mollis lectus pellentesque placerat nam praesent?",
+    question: "O que são curvas de nível e por que são importantes?",
     answer:
-      "Praesent commodo, augue a pulvinar cursus, justo sem dictum ipsum.",
+      "As curvas de nível são técnicas utilizadas para controlar a erosão do solo e melhorar o aproveitamento da água em propriedades rurais. Elas ajudam na conservação do solo, evitam perdas de nutrientes e aumentam a produtividade agrícola",
   },
   {
-    question: "Ultrices ullamcorper ante leo duis facilisi dis?",
-    answer: "Integer cursus, nibh nec posuere consequat, mi urna varius nunc.",
+    question: "Vocês realizam obras para loteamentos e infraestrutura?",
+    answer: "Sim. Trabalhamos com infraestrutura para loteamentos, incluindo terraplanagem, preparação de terreno, abertura de vias, drenagem e nivelamento de áreas. Nosso objetivo é preparar o terreno para receber construções com segurança e eficiência.",
   },
   {
-    question: "Ante est tincidunt leo magnis rutrum adipiscing?",
+    question: "Vocês fazem locação de máquinas para obras?",
     answer:
-      "Fusce porta, urna nec rutrum hendrerit, libero nibh feugiat urna.",
+      "Sim. Oferecemos locação de máquinas pesadas para terraplanagem e obras, atendendo propriedades rurais, construções e projetos de infraestrutura. Nossos equipamentos passam por manutenção constante para garantir desempenho e segurança.",
   },
 
 ];

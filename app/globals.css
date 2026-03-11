@@ -92,4 +92,34 @@ body {
 }
 
 
+/* Botão padrão com brilho sutil e lift */
+.ctaButton {
+  position: relative;
+  padding: 16px 32px;
+  border: 2px solid #3b3b3b;
+  color: #3b3b3b;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.ctaButton::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #3b3b3b;
+  transform: translateY(100%);
+  transition: transform 0.35s ease;
+  z-index: -1;
+}
+
+.ctaButton:hover {
+  color: white;
+}
+
+.ctaButton:hover::before {
+  transform: translateY(0);
+}
+
 

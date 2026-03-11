@@ -25,29 +25,30 @@ gsap.registerPlugin(ScrollTrigger);
 // Adicionei dados extras para simular conteúdo diferente por slide
 const PROJETOS = [
   {
-    src: "/galeria/galeria-01.webp",
-    title: "Residência Alpha",
-    desc: "Minimalismo e conforto em 400m²",
-    year: "2024",
+    src: "/galeria/represa.JPG",
+    title: "Limpeza de represa",
+    desc: "Limpeza de represa e Barramento",
+    year: "2025",
   },
   {
-    src: "/galeria/galeria-01.webp",
-    title: "Edifício Horizon",
-    desc: "Fachada ativa e design sustentável",
-    year: "2023",
+    src: "/galeria/destocas.JPEG",
+    title: "Destocas",
+    desc: "Destocas e limpeza de terreno para construção",
+    year: "2025",
   },
   {
-    src: "/galeria/galeria-01.webp",
-    title: "Loft Industrial",
-    desc: "Reforma completa no centro histórico",
-    year: "2023",
+    src: "/galeria/sistematização.JPEG",
+    title: "Maquinas",
+    desc: "Maquinas Atanazio Terraplanagem",
+    year: "2026",
   },
-  {
-    src: "/galeria/galeria-01.webp",
-    title: "Casa de Campo",
-    desc: "Integração total com a natureza",
-    year: "2022",
+    {
+    src: "/galeria/demolicao.JPEG",
+    title: "Demolição",
+    desc: "Demolição de estruturas",
+    year: "2026",
   },
+
 ];
 
 export default function ProjectsImmersive() {

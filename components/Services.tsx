@@ -18,42 +18,42 @@ const services: ServiceItem[] = [
     title: "Terraplanagem",
     description:
       "Seja para preparar o solo para construções, estradas ou paisagismo, nossa terraplanagem proporciona uma base sólida para atender as necessidades dos seus projetos.",
-    image: "/about.jpg",
+    image: "/terraplanagem.JPEG",
   },
   {
     id: "destocas",
     title: "Destocas",
     description:
       "Remover tocos de árvores, especialmente de variedades robustas como laranja e eucalipto, pode ser um desafio. Nossa equipe experiente executa a destoca de maneira eficiente, eliminando os tocos de forma segura e completa.",
-    image: "/about.jpg",
+    image: "/destocas.JPEG",
   },
   {
     id: "demolicoes",
     title: "Demolições",
     description:
       "Seja uma casa residencial ou um grande barracão industrial, nossos especialistas em demolição trabalham com assertividade e segurança para derrubar estruturas indesejadas.",
-    image: "/about.jpg",
+    image: "/demolicoes.JPEG",
   },
   {
     id: "limpeza",
     title: "Limpeza e construção de represa",
     description:
       "Nossa equipe é especializada na limpeza e construção de represas, criando reservatórios de água confiáveis para irrigação, abastecimento ou outros fins.",
-    image: "/about.jpg",
+    image: "galeria/represa.JPG",
   },
   {
     id: "curvas",
     title: "Curvas",
     description:
       "Nossos serviços de curvas de níveis fornecem informações precisas sobre o relevo do seu terreno, permitindo um planejamento mais eficaz e uma construção precisa.",
-    image: "/about.jpg",
+    image: "/curvas.JPEG",
   },
   {
     id: "locacao-maquinas",
     title: "Locação de máquinas leves e pesadas",
     description:
       "Seja para tarefas de menor escala ou projetos complexos, oferecemos locações de uma ampla gama de máquinas bem conservadas e operacionais.",
-    image: "/about.jpg",
+    image: "galeria/sistematização.JPEG",
   },
 ];
 
@@ -106,7 +106,7 @@ export default function Services() {
 
         <div className="flex mt-10 justify-center">
           <a
-            className="text-CinzaP px-6 py-4 tracking-wider uppercase border-2 border-CinzaP hover:bg-CinzaP hover:text-white transition"
+            className="text-CinzaP px-6 py-4 tracking-wider uppercase border-2 border-CinzaP hover:bg-CinzaP hover:text-white transition btn-cta"
             href="#contato"
           >
             Solicite um orçamento

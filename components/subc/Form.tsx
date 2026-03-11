@@ -44,7 +44,7 @@ export default function Form() {
         <div className="flex mt-4">
           <button
             type="submit"
-            className="bg-AmareloP cursor-pointer text-CinzaP px-6 py-2 uppercase tracking-widest rounded-md"
+            className="bg-AmareloP cursor-pointer text-CinzaP px-6 py-2 uppercase tracking-widest rounded-md btn-cta"
           >
             Enviar
           </button>

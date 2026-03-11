@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import type { IconType } from "react-icons";
 import {
   FaTractor,
@@ -11,10 +11,14 @@ import {
   FaTools,
 } from "react-icons/fa";
 
-// Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
+
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 type FeatureItemProps = {
   number: number;
@@ -26,7 +30,7 @@ const FeatureItem: React.FC<FeatureItemProps> = ({ number, title, Icon }) => {
   const num = String(number).padStart(2, "0");
 
   return (
-    <div className="group inline-flex flex-col items-center">
+    <div className="featureItem group inline-flex flex-col items-center">
       <div className="inline-grid place-items-center relative">
         <span className="col-start-1 row-start-1 font-extrabold leading-none text-white/10 text-[clamp(72px,10vw,120px)] select-none">
           {num}
@@ -46,41 +50,38 @@ const FeatureItem: React.FC<FeatureItemProps> = ({ number, title, Icon }) => {
 };
 
 const LineAbout: React.FC = () => {
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(".featureItem", {
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 85%",
+          once: true,
+        },
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.15,
+        ease: "power2.out",
+      });
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
   const items: FeatureItemProps[] = [
-    {
-      number: 1,
-      title: "Terraplanagem",
-      Icon: FaTractor,
-    },
-    {
-      number: 2,
-      title: "Destocas",
-      Icon: FaWrench,
-    },
-    {
-      number: 3,
-      title: "Demolições",
-      Icon: FaTruck,
-    },
-    {
-      number: 4,
-      title: "Limpeza e construção de represa",
-      Icon: FaWater,
-    },
-    {
-      number: 5,
-      title: "Curvas de nível",
-      Icon: FaMountain,
-    },
-    {
-      number: 6,
-      title: "Locação de máquinas leves e pesadas",
-      Icon: FaTools,
-    },
+    { number: 1, title: "Terraplanagem", Icon: FaTractor },
+    { number: 2, title: "Destocas", Icon: FaWrench },
+    { number: 3, title: "Demolições", Icon: FaTruck },
+    { number: 4, title: "Limpeza e construção de represa", Icon: FaWater },
+    { number: 5, title: "Curvas de nível", Icon: FaMountain },
+    { number: 6, title: "Locação de máquinas leves e pesadas", Icon: FaTools },
   ];
 
   return (
-    <section className="mt-10">
+    <section ref={sectionRef} className="mt-10">
       <div className="maxW">
         <Swiper
           modules={[Autoplay]}

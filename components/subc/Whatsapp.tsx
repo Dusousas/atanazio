@@ -13,7 +13,7 @@ export default function Whatsapp() {
       rel="noopener noreferrer"
       aria-label="Conversar no WhatsApp"
       title="Fale conosco no WhatsApp"
-      className="fixed bottom-4 right-4 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full p-3 shadow-lg transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-400"
+      className="fixed bottom-4 right-4 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full p-3 shadow-lg transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-400 btn-cta"
    >
       <FaWhatsapp size={28} />
     </a>
