@@ -95,7 +95,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${geologica.variable} antialiased`}>
+      <body
+        suppressHydrationWarning
+        className={`${geologica.variable} antialiased`}
+      >
         <Header />
         <main>{children}</main>
         <Whatsapp />
