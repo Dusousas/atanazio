@@ -107,7 +107,7 @@ export default async function ServiceSlugPage({ params }: PageProps) {
       <section className="border-b border-white/8">
         <div className="maxW">
           <div
-            className="grid divide-x divide-white/8"
+            className="flex flex-col justify-center items-center divide-x lg:divide-white/8 lg:flex-row"
             style={{
               gridTemplateColumns: `repeat(${service.highlights.length}, 1fr)`,
             }}

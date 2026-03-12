@@ -36,6 +36,8 @@ export default function Services() {
                     src={item.image}
                     alt={item.title}
                     className="w-full h-48 object-cover rounded-xl"
+                    loading="lazy"
+                    decoding="async"
                   />
 
                   <div className="flex flex-col flex-1 mt-6 overflow-hidden">

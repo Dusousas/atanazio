@@ -1,33 +1,19 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperClass } from "swiper/types";
-import {
-  Navigation,
-  Autoplay,
-  Thumbs,
-  EffectCreative, // Efeito criativo para transições modernas
-  Controller,
-} from "swiper/modules";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Navigation, Autoplay, Thumbs } from "swiper/modules";
 
-// Estilos do Swiper
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
-import "swiper/css/effect-creative";
 
-gsap.registerPlugin(ScrollTrigger);
-
-// Adicionei dados extras para simular conteúdo diferente por slide
 const PROJETOS = [
   {
     src: "/galeria/represa.JPG",
     title: "Limpeza de represa",
-    desc: "Limpeza de represa e Barramento",
+    desc: "Limpeza de represa e barramento",
     year: "2025",
   },
   {
@@ -38,157 +24,79 @@ const PROJETOS = [
   },
   {
     src: "/galeria/sistematização.JPEG",
-    title: "Maquinas",
-    desc: "Maquinas Atanazio Terraplanagem",
+    title: "Máquinas",
+    desc: "Máquinas Atanazio Terraplanagem",
     year: "2026",
   },
-    {
+  {
     src: "/galeria/demolicao.JPEG",
     title: "Demolição",
     desc: "Demolição de estruturas",
     year: "2026",
   },
-
 ];
 
 export default function ProjectsImmersive() {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperClass | null>(null);
-  const containerRef = useRef<HTMLElement>(null);
-  const titleRefs = useRef<(HTMLHeadingElement | null)[]>([]);
-  const descRefs = useRef<(HTMLParagraphElement | null)[]>([]);
-
-  // Animação de Entrada da Seção (ScrollTrigger)
-  useGSAP(
-    () => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 80%",
-          end: "bottom center",
-          toggleActions: "play none none reverse",
-        },
-      });
-
-      tl.from(".reveal-container", {
-        y: 100,
-        opacity: 0,
-        duration: 1.2,
-        ease: "power3.out",
-      });
-    },
-    { scope: containerRef }
-  );
-
-  // Função para animar o texto quando o slide muda
-  const handleSlideChange = (swiper: SwiperClass) => {
-    const activeIndex = swiper.realIndex;
-
-    // Reseta e anima o título atual
-    if (titleRefs.current[activeIndex]) {
-      gsap.fromTo(
-        titleRefs.current[activeIndex],
-        { y: 50, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, ease: "power3.out", delay: 0.2 }
-      );
-    }
-    // Reseta e anima a descrição atual
-    if (descRefs.current[activeIndex]) {
-      gsap.fromTo(
-        descRefs.current[activeIndex],
-        { y: 30, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, ease: "power3.out", delay: 0.3 }
-      );
-    }
-  };
 
   return (
-    <section
-      ref={containerRef}
-      className="py-24 bg-CinzaP relative overflow-hidden"
-    >
-      <div className="max-w-[1400px] mx-auto px-4 lg:px-8 reveal-container">
-        
-        {/* Cabeçalho minimalista */}
-        <div className="flex justify-between items-end mb-8 border-b border-white/10 pb-4">
+    <section className="relative overflow-hidden bg-CinzaP py-24">
+      <div className="mx-auto max-w-[1400px] px-4 lg:px-8">
+        <div className="mb-8 flex items-end justify-between border-b border-white/10 pb-4">
           <div>
-            <h3 className="text-amber-500 uppercase tracking-[0.2em] text-xs font-bold mb-2">
+            <h3 className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-amber-500">
               Portfolio
             </h3>
-            <h2 className="text-white text-3xl font-light">
-              Projetos Selecionados
-            </h2>
+            <h2 className="text-3xl font-light text-white">Projetos Selecionados</h2>
           </div>
-
         </div>
 
-        <div className="relative w-full h-[500px] lg:h-[650px]">
-          {/* Swiper Principal */}
+        <div className="relative h-[500px] w-full lg:h-[650px]">
           <Swiper
-            modules={[Navigation, Autoplay, Thumbs, EffectCreative, Controller]}
-            effect={"creative"}
-            creativeEffect={{
-              prev: {
-                shadow: true,
-                translate: ["-20%", 0, -1],
-              },
-              next: {
-                translate: ["100%", 0, 0],
-              },
-            }}
+            modules={[Navigation, Autoplay, Thumbs]}
             autoplay={{
               delay: 5000,
               disableOnInteraction: false,
+              pauseOnMouseEnter: true,
             }}
-            loop={true}
+            loop
             thumbs={{
               swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
             }}
-            onSlideChange={handleSlideChange}
-            className="h-full w-full rounded-2xl overflow-hidden shadow-2xl bg-zinc-900"
+            className="h-full w-full overflow-hidden rounded-2xl bg-zinc-900 shadow-2xl"
           >
             {PROJETOS.map((item, idx) => (
-              <SwiperSlide key={idx} className="relative group">
-                {/* Imagem de Fundo */}
+              <SwiperSlide key={item.src} className="relative group">
                 <img
                   src={item.src}
                   alt={item.title}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-[2000ms] ease-out group-[.swiper-slide-active]:scale-110"
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                  loading={idx === 0 ? "eager" : "lazy"}
+                  decoding="async"
                 />
-                
-                {/* Overlay Escuro (Gradiente) para leitura do texto */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80" />
 
-                {/* Conteúdo Flutuante Sobre a Imagem */}
-                <div className="absolute bottom-0 left-0 p-8 md:p-16 w-full md:w-2/3 flex flex-col justify-end h-full z-10 pointer-events-none">
-                  <span className="text-white/50 text-6xl md:text-8xl font-bold opacity-10 absolute -top-10 left-10 select-none">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-85" />
+
+                <div className="pointer-events-none absolute left-0 bottom-0 z-10 flex h-full w-full flex-col justify-end p-8 md:w-2/3 md:p-16">
+                  <span className="pointer-events-none absolute -top-10 left-10 select-none text-6xl font-bold text-white/10 md:text-8xl">
                     0{idx + 1}
                   </span>
-                  
-                  <div className="overflow-hidden">
-                    <h2
-                      ref={(el) => { titleRefs.current[idx] = el }}
-                      className="text-4xl md:text-6xl font-bold text-white mb-2 leading-tight"
-                    >
-                      {item.title}
-                    </h2>
-                  </div>
-                  
-                  <div className="overflow-hidden">
-                    <p
-                      ref={(el) => { descRefs.current[idx] = el }}
-                      className="text-lg md:text-xl text-gray-300 font-light border-l-2 border-amber-500 pl-4"
-                    >
-                      {item.desc} <span className="text-white/40 text-sm ml-2">| {item.year}</span>
-                    </p>
-                  </div>
+
+                  <h2 className="mb-2 text-4xl font-bold leading-tight text-white md:text-6xl">
+                    {item.title}
+                  </h2>
+
+                  <p className="border-l-2 border-amber-500 pl-4 text-lg font-light text-gray-300 md:text-xl">
+                    {item.desc}
+                    <span className="ml-2 text-sm text-white/40">| {item.year}</span>
+                  </p>
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
 
-          {/* Thumbs Flutuantes (Bottom Right) */}
-          <div className="absolute bottom-8 right-8 z-20 w-[280px] hidden md:block">
-             <div className="bg-black/40 backdrop-blur-md p-2 rounded-xl border border-white/10">
+          <div className="absolute right-8 bottom-8 z-20 hidden w-[280px] md:block">
+            <div className="rounded-xl border border-white/10 bg-black/40 p-2 backdrop-blur-md">
               <Swiper
                 onSwiper={setThumbsSwiper}
                 modules={[Thumbs]}
@@ -197,29 +105,26 @@ export default function ProjectsImmersive() {
                 spaceBetween={10}
                 className="thumbs-swiper"
               >
-                {PROJETOS.map((item, idx) => (
-                  <SwiperSlide key={idx} className="cursor-pointer !h-16 rounded-lg overflow-hidden opacity-40 transition-all hover:opacity-100 ui-selected:opacity-100 ui-selected:ring-2 ui-selected:ring-amber-500">
+                {PROJETOS.map((item) => (
+                  <SwiperSlide
+                    key={`thumb-${item.src}`}
+                    className="!h-16 cursor-pointer overflow-hidden rounded-lg opacity-50 transition-all hover:opacity-100"
+                  >
                     <img
                       src={item.src}
-                      alt="thumb"
-                      className="w-full h-full object-cover"
+                      alt={`Thumbnail ${item.title}`}
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </SwiperSlide>
                 ))}
               </Swiper>
             </div>
           </div>
-          
-          {/* Botão Mobile (caso não caiba os thumbs) */}
-          <div className="absolute bottom-6 right-6 md:hidden z-20">
-             <div className="flex gap-2">
-                {/* Você pode adicionar botões de navegação manuais aqui se quiser */}
-             </div>
-          </div>
-
         </div>
       </div>
-      
+
       <style jsx global>{`
         .swiper-slide-thumb-active {
           opacity: 1 !important;

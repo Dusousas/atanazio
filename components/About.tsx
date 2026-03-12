@@ -71,8 +71,10 @@ export default function About() {
             <img
               ref={imageRef}
               className="rounded-xl w-full"
-              src="galeria/sistematização.JPEG"
+              src="/galeria/sistematização.JPEG"
               alt="Máquinas pesadas em operação"
+              loading="lazy"
+              decoding="async"
             />
           </div>
 

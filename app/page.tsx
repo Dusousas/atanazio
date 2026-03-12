@@ -10,12 +10,24 @@ export default function Home() {
   return (
     <>
       <Main />
-      <About />
-      <Services />
-      <Projects />
-      <Partners />
-      <Faq />
-      <Contact />
+      <div style={{ contentVisibility: "auto", containIntrinsicSize: "1px 900px" }}>
+        <About />
+      </div>
+      <div style={{ contentVisibility: "auto", containIntrinsicSize: "1px 900px" }}>
+        <Services />
+      </div>
+      <div style={{ contentVisibility: "auto", containIntrinsicSize: "1px 980px" }}>
+        <Projects />
+      </div>
+      <div style={{ contentVisibility: "auto", containIntrinsicSize: "1px 420px" }}>
+        <Partners />
+      </div>
+      <div style={{ contentVisibility: "auto", containIntrinsicSize: "1px 820px" }}>
+        <Faq />
+      </div>
+      <div style={{ contentVisibility: "auto", containIntrinsicSize: "1px 950px" }}>
+        <Contact />
+      </div>
     </>
   );
 }

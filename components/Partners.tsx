@@ -1,10 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import React from "react";
 
 const partners = [
   "RAÍZEN",
@@ -18,48 +14,20 @@ const partners = [
 ];
 
 export default function Partners() {
-  const sectionRef = useRef<HTMLElement | null>(null);
-  const titleRef = useRef<HTMLDivElement | null>(null);
-
   const marqueeItems = [...partners, ...partners];
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      if (!sectionRef.current) return;
-
-      gsap.fromTo(
-        titleRef.current,
-        { opacity: 0, y: 24 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top 82%",
-            once: true,
-          },
-        },
-      );
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
 
   return (
     <section
       id="partners"
-      ref={sectionRef}
-      className="overflow-hidden bg-CinzaP py-20 border-y-2 border-white"
+      className="overflow-hidden border-y-2 border-white bg-CinzaP py-20"
     >
       <div className="maxW">
-        <div ref={titleRef} className="mx-auto max-w-4xl text-center">
-          <h3 className="text-sm uppercase tracking-[0.22em] text-AmareloP">
+        <div className="mx-auto max-w-4xl text-center">
+          <h3 className="text-AmareloP text-sm uppercase tracking-[0.22em]">
             Parceiros
           </h3>
 
-          <h2 className="text-center uppercase text-4xl text-white font-semibold mt-2 tracking-wider">
+          <h2 className="mt-2 text-center text-4xl font-semibold uppercase tracking-wider text-white">
             Empresas que já confiaram
           </h2>
         </div>
@@ -74,7 +42,7 @@ export default function Partners() {
             {marqueeItems.map((partner, index) => (
               <span
                 key={`${partner}-${index}`}
-                className="inline-flex shrink-0 items-center mx-10 text-lg font-semibold uppercase tracking-[0.18em] text-white transition duration-300 hover:text-white/50 lg:text-2xl"
+                className="mx-10 inline-flex shrink-0 items-center text-lg font-semibold uppercase tracking-[0.18em] text-white transition duration-300 hover:text-white/50 lg:text-2xl"
               >
                 {partner}
               </span>
