@@ -1,15 +1,11 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { Geologica } from "next/font/google";
 import "./globals.css";
-
-// Componentes do layout
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import Whatsapp from "@/components/subc/Whatsapp";
+import RouteShell from "@/components/RouteShell";
 
 const geologica = Geologica({
   subsets: ["latin"],
-  weight: ["100","200","300","400","500","600","700","800","900"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   display: "swap",
   fallback: ["sans-serif", "serif"],
   variable: "--font-sans",
@@ -95,14 +91,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body
-        suppressHydrationWarning
-        className={`${geologica.variable} antialiased`}
-      >
-        <Header />
-        <main>{children}</main>
-        <Whatsapp />
-        <Footer />
+      <body suppressHydrationWarning className={`${geologica.variable} antialiased`}>
+        <RouteShell>{children}</RouteShell>
       </body>
     </html>
   );

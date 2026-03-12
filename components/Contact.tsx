@@ -39,7 +39,7 @@ export default function Contact() {
                   Entre em contato
                 </h3>
                 <h1 className="text-3xl mt-2 mb-8 text-white">
-                  Don't hesitate to contact us for more information.
+                  Precisa de mais informações? Fale com nossa equipe.
                 </h1>
 
                 <div className="border-t border-gray-600 pt-6">
@@ -109,9 +109,12 @@ export default function Contact() {
                 </div>
 
                 <div className="flex">
-                  <FaInstagramSquare className="absolute bottom-4 left-10 text-2xl text-AmareloP" />
-                  <FaInstagramSquare className="absolute bottom-4 left-18 text-2xl text-AmareloP" />
-
+                  <a
+                    target="_blank"
+                    href="https://www.instagram.com/atanazioterraplanagem/"
+                  >
+                    <FaInstagramSquare className="absolute bottom-4 left-10 text-2xl text-AmareloP" />
+                  </a>
                 </div>
               </div>
             </article>
