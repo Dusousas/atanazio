@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getServiceBySlug, services } from "@/data/services";
+import ServiceGallery from "./ServiceGallery";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -56,13 +59,13 @@ export default async function ServiceSlugPage({ params }: PageProps) {
         </div>
 
         <div className="maxW relative z-10 pt-10 pb-0">
-          <a
+          <Link
             href="/#services"
             className="inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.28em] text-[#f8d244]/70 transition hover:text-[#f8d244]"
           >
             <span className="inline-block h-px w-4 bg-current" />
             Serviços
-          </a>
+          </Link>
 
           <div className="mt-8 grid min-h-[420px] grid-cols-1 gap-0 lg:grid-cols-2">
             <div className="flex flex-col justify-between border border-white/8 bg-white/[0.025] p-8 lg:p-12">
@@ -78,20 +81,24 @@ export default async function ServiceSlugPage({ params }: PageProps) {
                 </p>
               </div>
 
-              <a
+              <Link
                 href="/#contact"
                 className="mt-10 inline-flex items-center gap-3 self-start border border-[#f8d244] bg-[#f8d244] px-7 py-3.5 text-[11px] font-bold uppercase tracking-[0.2em] text-[#1a1400] transition hover:bg-transparent hover:text-[#f8d244]"
               >
                 Solicitar Orçamento
                 <span className="inline-block h-px w-5 bg-current" />
-              </a>
+              </Link>
             </div>
 
             <div className="relative min-h-[280px] overflow-hidden border border-l-0 border-white/8 lg:min-h-0">
-              <img
+              <Image
                 src={service.image}
                 alt={service.title}
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                quality={95}
                 className="absolute inset-0 h-full w-full object-cover"
+                priority
               />
               <div className="absolute inset-0 bg-gradient-to-r from-[#111009]/60 via-transparent to-transparent" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#111009]/80 via-[#111009]/10 to-transparent" />
@@ -136,24 +143,7 @@ export default async function ServiceSlugPage({ params }: PageProps) {
             <span className="h-px flex-1 bg-white/10" />
           </div>
 
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {service.gallery.map((image, index) => (
-              <div
-                key={`${image}-${index}`}
-                className="group relative overflow-hidden border border-white/8 bg-white/[0.02]"
-              >
-                <img
-                  src={image}
-                  alt={`${service.title} ${index + 1}`}
-                  className="h-[240px] w-full object-cover transition duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#111009]/70 via-transparent to-transparent opacity-80" />
-                <span className="absolute bottom-4 left-4 text-[10px] font-medium uppercase tracking-[0.25em] text-[#f8d244]/70">
-                  Foto {String(index + 1).padStart(2, "0")}
-                </span>
-              </div>
-            ))}
-          </div>
+          <ServiceGallery images={service.gallery} title={service.title} />
         </div>
       </section>
 
@@ -222,12 +212,12 @@ export default async function ServiceSlugPage({ params }: PageProps) {
               <p className="text-xs leading-6 text-zinc-500">
                 Entre em contato para uma avaliação sem compromisso.
               </p>
-              <a
+              <Link
                 href="/#contact"
                 className="mt-5 inline-flex w-full items-center justify-center gap-3 border border-[#f8d244]/30 bg-[#f8d244]/8 px-5 py-3.5 text-[11px] font-bold uppercase tracking-[0.2em] text-[#f8d244] transition hover:bg-[#f8d244] hover:text-[#1a1400]"
               >
                 Falar com a Equipe
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -236,3 +226,5 @@ export default async function ServiceSlugPage({ params }: PageProps) {
     </main>
   );
 }
+
+

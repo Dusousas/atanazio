@@ -23,6 +23,17 @@ export type ServiceItem = {
 const repeatImage = (image: string, total = 4): string[] =>
   Array.from({ length: total }, () => image);
 
+const buildSequentialGallery = (
+  folder: string,
+  prefix: string,
+  total: number,
+  extension = "JPEG"
+): string[] =>
+  Array.from(
+    { length: total },
+    (_, index) => `${folder}/${prefix}${index + 1}.${extension}`
+  );
+
 export const services: ServiceItem[] = [
   {
     id: "terraplanagem",
@@ -31,7 +42,7 @@ export const services: ServiceItem[] = [
     description:
       "Seja para preparar o solo para construcoes, estradas ou paisagismo, nossa terraplanagem proporciona uma base solida para atender as necessidades dos seus projetos.",
     image: "/terraplanagem.JPEG",
-    gallery: repeatImage("/terraplanagem.JPEG"),
+    gallery: buildSequentialGallery("/galeria/terraplanagem", "t", 4),
 
     intro:
       "Executamos terraplanagem com precisao para transformar terrenos irregulares em areas prontas para receber obras urbanas, rurais e industriais.",
@@ -75,7 +86,7 @@ export const services: ServiceItem[] = [
       "Remover tocos de arvores, especialmente de variedades robustas como laranja e eucalipto, pode ser um desafio. Nossa equipe experiente executa a destoca de maneira eficiente.",
 
     image: "/destocas.JPEG",
-    gallery: repeatImage("/destocas.JPEG"),
+    gallery: buildSequentialGallery("/galeria/destocas", "d", 4),
 
     intro:
       "Realizamos destocas completas para liberar areas de plantio, construcao ou circulacao de maquinas, com remocao segura de raizes e residuos.",
@@ -119,7 +130,7 @@ export const services: ServiceItem[] = [
       "Seja uma casa residencial ou um grande barracao industrial, nossos especialistas em demolicao trabalham com seguranca para derrubar estruturas indesejadas.",
 
     image: "/demolicoes.JPEG",
-    gallery: repeatImage("/demolicoes.JPEG"),
+    gallery: ["/galeria/demolicoes/de1.jpg", "/galeria/demolicoes/de2.JPEG"],
 
     intro:
       "Conduzimos demolicoes planejadas com foco em seguranca, controle da operacao e agilidade.",
@@ -164,7 +175,7 @@ export const services: ServiceItem[] = [
       "Nossa equipe e especializada na limpeza e construcao de represas, criando reservatorios de agua confiaveis.",
 
     image: "/galeria/represa.JPG",
-    gallery: repeatImage("/galeria/represa.JPG"),
+    gallery: buildSequentialGallery("/galeria/represas", "r", 4),
 
     intro:
       "Atuamos na limpeza, ampliacao e construcao de represas para garantir reservatorios funcionais.",
@@ -209,7 +220,7 @@ export const services: ServiceItem[] = [
       "Nossos servicos de curvas de nivel fornecem informacoes precisas sobre o relevo do terreno.",
 
     image: "/curvas.JPEG",
-    gallery: repeatImage("/curvas.JPEG"),
+    gallery: buildSequentialGallery("/galeria/curvas", "c", 4),
 
     intro:
       "Oferecemos servicos de curvas de nivel para orientar decisoes tecnicas.",
@@ -253,8 +264,8 @@ export const services: ServiceItem[] = [
     description:
       "Oferecemos locacoes de uma ampla gama de maquinas bem conservadas.",
 
-    image: "/galeria/galeria-01.webp",
-    gallery: repeatImage("/galeria/galeria-01.webp"),
+    image: "/galeria/sistematização.JPEG",
+    gallery: repeatImage("/galeria/sistematização.JPEG"),
 
     intro:
       "Disponibilizamos maquinas confiaveis para acelerar seu projeto.",

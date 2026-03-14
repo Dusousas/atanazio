@@ -1,15 +1,6 @@
 import type { Metadata } from "next";
-import { Geologica } from "next/font/google";
 import "./globals.css";
 import RouteShell from "@/components/RouteShell";
-
-const geologica = Geologica({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  display: "swap",
-  fallback: ["sans-serif", "serif"],
-  variable: "--font-sans",
-});
 
 const title =
   "Atanazio Terraplanagem | Terraplanagem, demolição e locação de máquinas em Brotas e região";
@@ -91,7 +82,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body suppressHydrationWarning className={`${geologica.variable} antialiased`}>
+      <body suppressHydrationWarning className="antialiased">
         <RouteShell>{children}</RouteShell>
       </body>
     </html>
