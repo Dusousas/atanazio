@@ -11,25 +11,25 @@ import "swiper/css/thumbs";
 
 const PROJETOS = [
   {
-    src: "/galeria/represa.JPG",
+    src: "/galeria/represa.webp",
     title: "Limpeza de represa",
     desc: "Limpeza de represa e barramento",
     year: "2025",
   },
   {
-    src: "/galeria/destocas.JPEG",
+    src: "/galeria/destocas.webp",
     title: "Destocas",
     desc: "Destocas e limpeza de terreno para construção",
     year: "2025",
   },
   {
-    src: "/galeria/sistematização.JPEG",
+    src: "/galeria/sistematização.webp",
     title: "Máquinas",
     desc: "Máquinas Atanazio Terraplanagem",
     year: "2026",
   },
   {
-    src: "/galeria/demolicao.JPEG",
+    src: "/galeria/demolicao.webp",
     title: "Demolição",
     desc: "Demolição de estruturas",
     year: "2026",

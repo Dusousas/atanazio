@@ -27,7 +27,7 @@ const buildSequentialGallery = (
   folder: string,
   prefix: string,
   total: number,
-  extension = "JPEG"
+  extension = "webp"
 ): string[] =>
   Array.from(
     { length: total },
@@ -41,7 +41,7 @@ export const services: ServiceItem[] = [
     title: "Terraplanagem",
     description:
       "Seja para preparar o solo para construcoes, estradas ou paisagismo, nossa terraplanagem proporciona uma base solida para atender as necessidades dos seus projetos.",
-    image: "/terraplanagem.JPEG",
+    image: "/terraplanagem.webp",
     gallery: buildSequentialGallery("/galeria/terraplanagem", "t", 4),
 
     intro:
@@ -85,7 +85,7 @@ export const services: ServiceItem[] = [
     description:
       "Remover tocos de arvores, especialmente de variedades robustas como laranja e eucalipto, pode ser um desafio. Nossa equipe experiente executa a destoca de maneira eficiente.",
 
-    image: "/destocas.JPEG",
+    image: "/destocas.webp",
     gallery: buildSequentialGallery("/galeria/destocas", "d", 4),
 
     intro:
@@ -129,8 +129,8 @@ export const services: ServiceItem[] = [
     description:
       "Seja uma casa residencial ou um grande barracao industrial, nossos especialistas em demolicao trabalham com seguranca para derrubar estruturas indesejadas.",
 
-    image: "/demolicoes.JPEG",
-    gallery: ["/galeria/demolicoes/de1.jpg", "/galeria/demolicoes/de2.JPEG"],
+    image: "/demolicoes.webp",
+    gallery: ["/galeria/demolicoes/de1.webp", "/galeria/demolicoes/de2.webp"],
 
     intro:
       "Conduzimos demolicoes planejadas com foco em seguranca, controle da operacao e agilidade.",
@@ -174,7 +174,7 @@ export const services: ServiceItem[] = [
     description:
       "Nossa equipe e especializada na limpeza e construcao de represas, criando reservatorios de agua confiaveis.",
 
-    image: "/galeria/represa.JPG",
+    image: "/galeria/represa.webp",
     gallery: buildSequentialGallery("/galeria/represas", "r", 4),
 
     intro:
@@ -219,7 +219,7 @@ export const services: ServiceItem[] = [
     description:
       "Nossos servicos de curvas de nivel fornecem informacoes precisas sobre o relevo do terreno.",
 
-    image: "/curvas.JPEG",
+    image: "/curvas.webp",
     gallery: buildSequentialGallery("/galeria/curvas", "c", 4),
 
     intro:
@@ -257,6 +257,51 @@ export const services: ServiceItem[] = [
   },
 
   {
+    id: "infraestrutura-pavimentacao",
+    slug: "infraestrutura-e-pavimentacao",
+    title: "Infraestrutura e pavimentacao",
+
+    description:
+      "Executamos servicos de infraestrutura e pavimentacao com foco em base firme, durabilidade e boa circulacao.",
+
+    image: "/galeria/infraestrutura.JPEG",
+    gallery: buildSequentialGallery("/galeria/infra", "i", 4, "JPEG"),
+
+    intro:
+      "Realizamos obras de infraestrutura e pavimentacao para preparar vias, patios e acessos com padrao tecnico.",
+
+    highlights: [
+      "Preparacao e regularizacao da base",
+      "Execucao com equipamentos adequados",
+      "Acabamento para trafego seguro e eficiente",
+    ],
+
+    process: [
+      {
+        title: "Analise tecnica do local",
+        description:
+          "Avaliamos condicoes do solo, drenagem e uso previsto para definir o melhor metodo de execucao.",
+      },
+      {
+        title: "Preparacao da estrutura",
+        description:
+          "Executamos nivelamento, compactacao e ajustes da base para receber a pavimentacao.",
+      },
+      {
+        title: "Pavimentacao e acabamento",
+        description:
+          "Aplicamos as etapas finais de pavimentacao e revisamos o acabamento para garantir qualidade.",
+      },
+    ],
+
+    idealFor: [
+      "Acessos rurais e urbanos",
+      "Patios industriais e comerciais",
+      "Obras de infraestrutura em geral",
+    ],
+  },
+
+  {
     id: "locacao-maquinas",
     slug: "locacao-maquinas",
     title: "Locacao de maquinas leves e pesadas",
@@ -264,8 +309,8 @@ export const services: ServiceItem[] = [
     description:
       "Oferecemos locacoes de uma ampla gama de maquinas bem conservadas.",
 
-    image: "/galeria/sistematização.JPEG",
-    gallery: repeatImage("/galeria/sistematização.JPEG"),
+    image: "/galeria/sistematização.webp",
+    gallery: repeatImage("/galeria/sistematização.webp"),
 
     intro:
       "Disponibilizamos maquinas confiaveis para acelerar seu projeto.",

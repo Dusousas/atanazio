@@ -1,15 +1,27 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import { Swiper as SwiperType } from "swiper";
 import { services } from "@/data/services";
 import "swiper/css";
+import { FaArrowLeft } from "react-icons/fa";
 
 export default function Services() {
+  const swiperRef = useRef<SwiperType | null>(null);
+
+  const goToPreviousSlide = () => {
+    swiperRef.current?.slidePrev();
+  };
+
+  const goToNextSlide = () => {
+    swiperRef.current?.slideNext();
+  };
+
   return (
     <section id="services" className="bgService py-20">
-      <div className="maxW">
+      <div className="maxW relative">
         <h3 className="text-CinzaP uppercase text-center font-bold tracking-wider">
           Soluções Completas
         </h3>
@@ -17,12 +29,36 @@ export default function Services() {
           Nossos serviços
         </h2>
 
-        <article className="mt-20">
+        <div className="mt-8 flex justify-center md:absolute md:right-4 md:justify-end lg:-mt-0">
+          <div className="flex gap-4">
+            <button
+              type="button"
+              onClick={goToPreviousSlide}
+              aria-label="Voltar para o servico anterior"
+              className="h-10 w-10 border border-CinzaP flex justify-center items-center rounded-full cursor-pointer transition hover:bg-CinzaP group"
+            >
+              <FaArrowLeft className="text-CinzaP transition group-hover:text-white" />
+            </button>
+            <button
+              type="button"
+              onClick={goToNextSlide}
+              aria-label="Ir para o proximo servico"
+              className="h-10 w-10 border border-CinzaP flex justify-center items-center rounded-full cursor-pointer transition hover:bg-CinzaP group"
+            >
+              <FaArrowLeft className="rotate-180 text-CinzaP transition group-hover:text-white" />
+            </button>
+          </div>
+        </div>
+
+        <article className="mt-12 md:mt-20">
           <Swiper
             modules={[Autoplay]}
             spaceBetween={24}
             slidesPerView={1}
             autoplay={{ delay: 3500, disableOnInteraction: false }}
+            onSwiper={(swiper) => {
+              swiperRef.current = swiper;
+            }}
             breakpoints={{
               640: { slidesPerView: 1 },
               768: { slidesPerView: 2 },
@@ -31,7 +67,7 @@ export default function Services() {
           >
             {services.map((item) => (
               <SwiperSlide key={item.id}>
-                <div className="bg-CinzaP rounded-2xl p-6 h-[420px] lg:h-[420px] flex flex-col border border-white/10">
+                <div className="bg-CinzaP rounded-2xl p-6 h-[390px] md:h-[420px] lg:h-[420px] flex flex-col border border-white/10">
                   <img
                     src={item.image}
                     alt={item.title}

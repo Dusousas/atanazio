@@ -67,17 +67,28 @@ export default function About() {
     <>
       <section id="about" ref={sectionRef} className="py-20 bg-CinzaP">
         <div className="maxW flex flex-col-reverse justify-center items-center gap-15 lg:flex-row">
+          
+          {/* IMAGEM */}
           <div className="lg:w-1/2">
-            <img
-              ref={imageRef}
-              className="rounded-xl w-full"
-              src="/galeria/sistematização.JPEG"
-              alt="Máquinas pesadas em operação"
-              loading="lazy"
-              decoding="async"
-            />
+            <div className="relative w-full">
+
+              {/* BORDA DECORATIVA */}
+              <div className="absolute -left-6 -bottom-6 w-full h-full border-8 border-AmareloP rounded-xl"></div>
+
+              {/* IMAGEM */}
+              <img
+                ref={imageRef}
+                className="relative rounded-xl w-full object-cover"
+                src="/galeria/sistematização.webp"
+                alt="Máquinas pesadas em operação"
+                loading="lazy"
+                decoding="async"
+              />
+
+            </div>
           </div>
 
+          {/* CONTEÚDO */}
           <div ref={contentRef} className="lg:w-1/2">
             <h3 className="uppercase text-sm text-AmareloP text-center lg:text-left">
               Sobre nós
@@ -95,6 +106,7 @@ export default function About() {
               ambiciosos com dedicação e maestria.
             </p>
 
+            {/* ITEM 1 */}
             <div
               ref={(el) => {
                 itemsRef.current[0] = el;
@@ -116,6 +128,7 @@ export default function About() {
               </div>
             </div>
 
+            {/* ITEM 2 */}
             <div
               ref={(el) => {
                 itemsRef.current[1] = el;
@@ -137,6 +150,7 @@ export default function About() {
               </div>
             </div>
 
+            {/* ITEM 3 */}
             <div
               ref={(el) => {
                 itemsRef.current[2] = el;
@@ -158,6 +172,7 @@ export default function About() {
               </div>
             </div>
 
+            {/* ITEM 4 */}
             <div
               ref={(el) => {
                 itemsRef.current[3] = el;
