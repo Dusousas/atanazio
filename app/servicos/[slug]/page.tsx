@@ -82,7 +82,7 @@ export default async function ServiceSlugPage({ params }: PageProps) {
               </div>
 
               <Link
-                href="/#contact"
+                href="https://api.whatsapp.com/send/?phone=5514996794593&text=Ol%C3%A1+gostaria+de+algumas+informa%C3%A7%C3%B5es%21&type=phone_number&app_absent=0"
                 className="mt-10 inline-flex items-center gap-3 self-start border border-[#f8d244] bg-[#f8d244] px-7 py-3.5 text-[11px] font-bold uppercase tracking-[0.2em] text-[#1a1400] transition hover:bg-transparent hover:text-[#f8d244]"
               >
                 Solicitar Orçamento
@@ -213,7 +213,7 @@ export default async function ServiceSlugPage({ params }: PageProps) {
                 Entre em contato para uma avaliação sem compromisso.
               </p>
               <Link
-                href="/#contact"
+                href="https://api.whatsapp.com/send/?phone=5514996794593&text=Ol%C3%A1+gostaria+de+algumas+informa%C3%A7%C3%B5es%21&type=phone_number&app_absent=0"
                 className="mt-5 inline-flex w-full items-center justify-center gap-3 border border-[#f8d244]/30 bg-[#f8d244]/8 px-5 py-3.5 text-[11px] font-bold uppercase tracking-[0.2em] text-[#f8d244] transition hover:bg-[#f8d244] hover:text-[#1a1400]"
               >
                 Falar com a Equipe

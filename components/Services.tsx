@@ -101,7 +101,7 @@ export default function Services() {
         <div className="flex mt-10 justify-center">
           <a
             className="text-CinzaP px-6 py-4 tracking-wider uppercase border-2 border-CinzaP hover:bg-CinzaP hover:text-white transition btn-cta"
-            href="#contact"
+            href="https://api.whatsapp.com/send/?phone=5514996794593&text=Ol%C3%A1+gostaria+de+algumas+informa%C3%A7%C3%B5es%21&type=phone_number&app_absent=0"
           >
             Solicite um orçamento
           </a>

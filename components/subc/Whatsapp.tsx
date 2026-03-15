@@ -4,7 +4,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 export default function Whatsapp() {
   const phone = process.env.NEXT_PUBLIC_WHATSAPP_PHONE || '';
   const message = process.env.NEXT_PUBLIC_WHATSAPP_MESSAGE || '';
-  const href = `https://wa.me/${phone}${message ? `?text=${encodeURIComponent(message)}` : ''}`;
+  const href = `https://wa.me/${5514996794593}${message ? `?text=${encodeURIComponent(message)}` : ''}`;
 
   return (
     <a

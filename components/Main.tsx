@@ -15,7 +15,7 @@ export default function Main() {
           </p>
 
           <div className="mt-6 flex justify-center lg:justify-start">
-            <a className="ctaButton" href="#contact">
+            <a className="ctaButton" href="https://api.whatsapp.com/send/?phone=5514996794593&text=Ol%C3%A1+gostaria+de+algumas+informa%C3%A7%C3%B5es%21&type=phone_number&app_absent=0">
               Entrar em contato
             </a>
           </div>

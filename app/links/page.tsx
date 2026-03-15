@@ -26,21 +26,21 @@ export default function LinksPage() {
     () => [
       {
         label: "Fale Conosco",
-        href: "https://wa.me/5514996794593",
+        href: "https://api.whatsapp.com/send/?phone=5514996794593&text=Ol%C3%A1+gostaria+de+algumas+informa%C3%A7%C3%B5es%21&type=phone_number&app_absent=0",
         icon: <FaWhatsapp />,
         accent: "#25D366",
         iconColor: "#fff",
       },
       {
         label: "Ligue Agora",
-        href: "tel:+5514996794593",
+        href: "https://criarmeulink.com.br/u/1699383687",
         icon: <FaPhoneAlt />,
         accent: "#F8D244",
         iconColor: "#111",
       },
       {
         label: "Nossa Localização",
-        href: "https://maps.google.com/?q=Brotas,SP",
+        href: "https://www.google.com/maps/place/Atanazio+Terraplanagem/@-22.2698239,-48.1386772,15z/data=!4m6!3m5!1s0x94c779b8e5214d71:0x2ad7a636b9efb9ee!8m2!3d-22.2698239!4d-48.1386772!16s%2Fg%2F11n11yd7h8?sa=X&ved=2ahUKEwjBypyNyLKCAxX0B7kGHSTdBdEQ_BJ6BAg2EAA&entry=tts",
         icon: <FaMapMarkerAlt />,
         accent: "#E53935",
         iconColor: "#fff",
@@ -54,7 +54,7 @@ export default function LinksPage() {
       },
       {
         label: "Facebook",
-        href: "https://www.facebook.com",
+        href: "https://www.facebook.com/terraplanagemetransportes?mibextid=aejMdD",
         icon: <FaFacebookF />,
         accent: "#1877F2",
         iconColor: "#fff",
