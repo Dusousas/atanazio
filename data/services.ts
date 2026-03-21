@@ -16,13 +16,6 @@ export type ServiceItem = {
   idealFor: string[];
 };
 
-/**
- * Repete uma imagem para gerar uma galeria inicial
- * Depois você pode substituir manualmente
- */
-const repeatImage = (image: string, total = 4): string[] =>
-  Array.from({ length: total }, () => image);
-
 const buildSequentialGallery = (
   folder: string,
   prefix: string,
@@ -304,13 +297,18 @@ export const services: ServiceItem[] = [
   {
     id: "locacao-maquinas",
     slug: "locacao-maquinas",
-    title: "Locacao de maquinas leves e pesadas",
+    title: "Locação de maquinas leves e pesadas",
 
     description:
       "Oferecemos locacoes de uma ampla gama de maquinas bem conservadas.",
 
     image: "/galeria/sistematização.webp",
-    gallery: repeatImage("/galeria/sistematização.webp"),
+    gallery: [
+      "/galeria/sistematização.webp",
+      "/galeria/locacao/l2.jpg",
+      "/galeria/locacao/l3.jpg",
+      "/galeria/locacao/l4.JPEG",
+    ],
 
     intro:
       "Disponibilizamos maquinas confiaveis para acelerar seu projeto.",
