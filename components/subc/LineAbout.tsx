@@ -73,11 +73,12 @@ const LineAbout: React.FC = () => {
 
   const items: FeatureItemProps[] = [
     { number: 1, title: "Terraplanagem", Icon: FaTractor },
-    { number: 2, title: "Destocas", Icon: FaWrench },
-    { number: 3, title: "Demolições", Icon: FaTruck },
-    { number: 4, title: "Limpeza e construção de represa", Icon: FaWater },
-    { number: 5, title: "Curvas de nível", Icon: FaMountain },
-    { number: 6, title: "Locação de máquinas leves e pesadas", Icon: FaTools },
+    { number: 2, title: "Limpeza e construção de represa", Icon: FaWater },
+    { number: 3, title: "Infraestrutura e pavimentação", Icon: FaTools },
+    { number: 4, title: "Curvas de nível", Icon: FaMountain },
+    { number: 5, title: "Destocas", Icon: FaWrench },
+    { number: 6, title: "Demolições", Icon: FaTruck },
+    { number: 7, title: "Locação de máquinas leves e pesadas", Icon: FaTools },
   ];
 
   return (

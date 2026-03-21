@@ -79,6 +79,141 @@ export const services: ServiceItem[] = [
   },
 
   {
+    id: "limpeza",
+    slug: "limpeza-construcao-represa",
+    title: "Limpeza e construcao de represa",
+
+    description:
+      "Nossa equipe e especializada na limpeza e construcao de represas, criando reservatorios de agua confiaveis.",
+
+    image: "/galeria/represa.webp",
+    gallery: buildSequentialGallery("/galeria/represas", "r", 4),
+
+    intro:
+      "Atuamos na limpeza, ampliacao e construcao de represas para garantir reservatorios funcionais.",
+
+    highlights: [
+      "Escavacao e conformacao de reservatorios",
+      "Melhoria do armazenamento de agua",
+      "Execucao para uso rural e produtivo",
+    ],
+
+    process: [
+      {
+        title: "Avaliacao da area",
+        description:
+          "Estudamos topografia, drenagem e finalidade da represa.",
+      },
+      {
+        title: "Escavacao e modelagem",
+        description:
+          "Executamos escavacao e limpeza com foco em capacidade de armazenamento.",
+      },
+      {
+        title: "Acabamento e revisao",
+        description:
+          "Finalizamos o servico com revisao de bordas e acessos.",
+      },
+    ],
+
+    idealFor: [
+      "Irrigacao agricola",
+      "Reserva de agua rural",
+      "Melhoria hidrica de propriedades",
+    ],
+  },
+
+  {
+    id: "infraestrutura-pavimentacao",
+    slug: "infraestrutura-e-pavimentacao",
+    title: "Infraestrutura e pavimentacao",
+
+    description:
+      "Executamos servicos de infraestrutura e pavimentacao com foco em base firme, durabilidade e boa circulacao.",
+
+    image: "/galeria/infraestrutura.JPEG",
+    gallery: buildSequentialGallery("/galeria/infra", "i", 4, "JPEG"),
+
+    intro:
+      "Realizamos obras de infraestrutura e pavimentacao para preparar vias, patios e acessos com padrao tecnico.",
+
+    highlights: [
+      "Preparacao e regularizacao da base",
+      "Execucao com equipamentos adequados",
+      "Acabamento para trafego seguro e eficiente",
+    ],
+
+    process: [
+      {
+        title: "Analise tecnica do local",
+        description:
+          "Avaliamos condicoes do solo, drenagem e uso previsto para definir o melhor metodo de execucao.",
+      },
+      {
+        title: "Preparacao da estrutura",
+        description:
+          "Executamos nivelamento, compactacao e ajustes da base para receber a pavimentacao.",
+      },
+      {
+        title: "Pavimentacao e acabamento",
+        description:
+          "Aplicamos as etapas finais de pavimentacao e revisamos o acabamento para garantir qualidade.",
+      },
+    ],
+
+    idealFor: [
+      "Acessos rurais e urbanos",
+      "Patios industriais e comerciais",
+      "Obras de infraestrutura em geral",
+    ],
+  },
+
+  {
+    id: "curvas",
+    slug: "curvas-de-nivel",
+    title: "Curvas de nivel",
+
+    description:
+      "Nossos servicos de curvas de nivel fornecem informacoes precisas sobre o relevo do terreno.",
+
+    image: "/curvas.webp",
+    gallery: buildSequentialGallery("/galeria/curvas", "c", 4),
+
+    intro:
+      "Oferecemos servicos de curvas de nivel para orientar decisoes tecnicas.",
+
+    highlights: [
+      "Leitura detalhada do relevo",
+      "Base tecnica para projetos",
+      "Maior eficiencia na movimentacao de terra",
+    ],
+
+    process: [
+      {
+        title: "Levantamento topografico",
+        description:
+          "Coletamos dados do terreno para identificar variacoes de nivel.",
+      },
+      {
+        title: "Interpretacao tecnica",
+        description:
+          "Organizamos informacoes para orientar a execucao da obra.",
+      },
+      {
+        title: "Aplicacao em campo",
+        description:
+          "Usamos as curvas para orientar cortes e drenagem.",
+      },
+    ],
+
+    idealFor: [
+      "Planejamento de terraplanagem",
+      "Projetos de drenagem",
+      "Implantacao de estradas",
+    ],
+  },
+
+  {
     id: "destocas",
     slug: "destocas",
     title: "Destocas",
@@ -163,141 +298,6 @@ export const services: ServiceItem[] = [
       "Reforma de areas urbanas",
       "Substituicao de estruturas antigas",
       "Liberacao de terrenos para novos projetos",
-    ],
-  },
-
-  {
-    id: "limpeza",
-    slug: "limpeza-construcao-represa",
-    title: "Limpeza e construcao de represa",
-
-    description:
-      "Nossa equipe e especializada na limpeza e construcao de represas, criando reservatorios de agua confiaveis.",
-
-    image: "/galeria/represa.webp",
-    gallery: buildSequentialGallery("/galeria/represas", "r", 4),
-
-    intro:
-      "Atuamos na limpeza, ampliacao e construcao de represas para garantir reservatorios funcionais.",
-
-    highlights: [
-      "Escavacao e conformacao de reservatorios",
-      "Melhoria do armazenamento de agua",
-      "Execucao para uso rural e produtivo",
-    ],
-
-    process: [
-      {
-        title: "Avaliacao da area",
-        description:
-          "Estudamos topografia, drenagem e finalidade da represa.",
-      },
-      {
-        title: "Escavacao e modelagem",
-        description:
-          "Executamos escavacao e limpeza com foco em capacidade de armazenamento.",
-      },
-      {
-        title: "Acabamento e revisao",
-        description:
-          "Finalizamos o servico com revisao de bordas e acessos.",
-      },
-    ],
-
-    idealFor: [
-      "Irrigacao agricola",
-      "Reserva de agua rural",
-      "Melhoria hidrica de propriedades",
-    ],
-  },
-
-  {
-    id: "curvas",
-    slug: "curvas-de-nivel",
-    title: "Curvas de nivel",
-
-    description:
-      "Nossos servicos de curvas de nivel fornecem informacoes precisas sobre o relevo do terreno.",
-
-    image: "/curvas.webp",
-    gallery: buildSequentialGallery("/galeria/curvas", "c", 4),
-
-    intro:
-      "Oferecemos servicos de curvas de nivel para orientar decisoes tecnicas.",
-
-    highlights: [
-      "Leitura detalhada do relevo",
-      "Base tecnica para projetos",
-      "Maior eficiencia na movimentacao de terra",
-    ],
-
-    process: [
-      {
-        title: "Levantamento topografico",
-        description:
-          "Coletamos dados do terreno para identificar variacoes de nivel.",
-      },
-      {
-        title: "Interpretacao tecnica",
-        description:
-          "Organizamos informacoes para orientar a execucao da obra.",
-      },
-      {
-        title: "Aplicacao em campo",
-        description:
-          "Usamos as curvas para orientar cortes e drenagem.",
-      },
-    ],
-
-    idealFor: [
-      "Planejamento de terraplanagem",
-      "Projetos de drenagem",
-      "Implantacao de estradas",
-    ],
-  },
-
-  {
-    id: "infraestrutura-pavimentacao",
-    slug: "infraestrutura-e-pavimentacao",
-    title: "Infraestrutura e pavimentacao",
-
-    description:
-      "Executamos servicos de infraestrutura e pavimentacao com foco em base firme, durabilidade e boa circulacao.",
-
-    image: "/galeria/infraestrutura.JPEG",
-    gallery: buildSequentialGallery("/galeria/infra", "i", 4, "JPEG"),
-
-    intro:
-      "Realizamos obras de infraestrutura e pavimentacao para preparar vias, patios e acessos com padrao tecnico.",
-
-    highlights: [
-      "Preparacao e regularizacao da base",
-      "Execucao com equipamentos adequados",
-      "Acabamento para trafego seguro e eficiente",
-    ],
-
-    process: [
-      {
-        title: "Analise tecnica do local",
-        description:
-          "Avaliamos condicoes do solo, drenagem e uso previsto para definir o melhor metodo de execucao.",
-      },
-      {
-        title: "Preparacao da estrutura",
-        description:
-          "Executamos nivelamento, compactacao e ajustes da base para receber a pavimentacao.",
-      },
-      {
-        title: "Pavimentacao e acabamento",
-        description:
-          "Aplicamos as etapas finais de pavimentacao e revisamos o acabamento para garantir qualidade.",
-      },
-    ],
-
-    idealFor: [
-      "Acessos rurais e urbanos",
-      "Patios industriais e comerciais",
-      "Obras de infraestrutura em geral",
     ],
   },
 

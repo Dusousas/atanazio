@@ -2,6 +2,7 @@ import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Faq from "@/components/Faq";
 import Main from "@/components/Main";
+import MainVideo from "@/components/MainVideo";
 import Partners from "@/components/Partners";
 import Projects from "@/components/Projects";
 import Services from "@/components/Services";
@@ -9,7 +10,8 @@ import Services from "@/components/Services";
 export default function Home() {
   return (
     <>
-      <Main />
+      {/* <Main /> */}
+      <MainVideo />
       <div style={{ contentVisibility: "auto", containIntrinsicSize: "1px 900px" }}>
         <About />
       </div>
