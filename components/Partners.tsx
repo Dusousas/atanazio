@@ -43,7 +43,7 @@ export default function Partners() {
         <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-24 bg-gradient-to-r from-CinzaP via-CinzaP/85 to-transparent lg:w-32" />
         <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-24 bg-gradient-to-l from-CinzaP via-CinzaP/85 to-transparent lg:w-32" />
 
-        <div className="marquee">
+        <div className="marquee py-2">
           <div className="marquee-track">
             {marqueeItems.map((partner, index) => (
               <div
