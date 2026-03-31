@@ -37,9 +37,12 @@ export default function Partners() {
   return (
     <section
       id="partners"
-      className="overflow-hidden border-y border-white/12 bg-CinzaP py-10 lg:py-12"
+      className="relative overflow-hidden border-y border-white/12 bg-CinzaP py-10 lg:py-12"
     >
-      <div className="relative">
+      <div className="section-grid-pattern section-grid-primary section-grid-soft section-grid-fade-top" />
+      <div className="section-grid-pattern section-grid-secondary section-grid-soft section-grid-fade-top" />
+
+      <div className="relative z-10">
         <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-24 bg-gradient-to-r from-CinzaP via-CinzaP/85 to-transparent lg:w-32" />
         <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-24 bg-gradient-to-l from-CinzaP via-CinzaP/85 to-transparent lg:w-32" />
 

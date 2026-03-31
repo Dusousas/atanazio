@@ -42,7 +42,10 @@ export default function ProjectsImmersive() {
 
   return (
     <section className="relative overflow-hidden bg-CinzaP py-12">
-      <div className="mx-auto max-w-[1400px] px-4 lg:px-8">
+      <div className="section-grid-pattern section-grid-primary section-grid-fade-right" />
+      <div className="section-grid-pattern section-grid-secondary section-grid-fade-right" />
+
+      <div className="relative z-10 mx-auto max-w-[1400px] px-4 lg:px-8">
         <div className="relative h-[500px] w-full lg:h-[650px]">
           <Swiper
             onSwiper={setMainSwiper}

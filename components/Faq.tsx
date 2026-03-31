@@ -150,8 +150,14 @@ export default function Faq() {
         }
       `}</style>
 
-      <section id="faq" className="bg-CinzaP border-t border-white/20 py-20">
-        <div className="max-w-7xl mx-auto px-4">
+      <section
+        id="faq"
+        className="relative overflow-hidden bg-CinzaP border-t border-white/20 py-20"
+      >
+        <div className="section-grid-pattern section-grid-primary section-grid-soft section-grid-fade-left" />
+        <div className="section-grid-pattern section-grid-secondary section-grid-soft section-grid-fade-left" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4">
           <h3 className="text-white uppercase text-center tracking-wider">
             Alguma dúvida?
           </h3>

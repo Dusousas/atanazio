@@ -95,6 +95,118 @@ body,html{
   z-index: 1;
 }
 
+.section-grid-pattern{
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.section-grid-primary{
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(248, 210, 68, 0.16) 0 1px,
+      transparent 1px 18px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(248, 210, 68, 0.14) 0 1px,
+      transparent 1px 18px
+    );
+  opacity: 0.75;
+}
+
+.section-grid-secondary{
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.04) 0 1px,
+      transparent 1px 54px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(248, 210, 68, 0.07) 0 1px,
+      transparent 1px 54px
+    );
+  opacity: 0.32;
+}
+
+.section-grid-soft.section-grid-primary{
+  opacity: 0.48;
+}
+
+.section-grid-soft.section-grid-secondary{
+  opacity: 0.2;
+}
+
+.section-grid-fade-left{
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.92) 0%,
+    rgba(0, 0, 0, 0.78) 24%,
+    rgba(0, 0, 0, 0.4) 62%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.92) 0%,
+    rgba(0, 0, 0, 0.78) 24%,
+    rgba(0, 0, 0, 0.4) 62%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.section-grid-fade-right{
+  -webkit-mask-image: linear-gradient(
+    270deg,
+    rgba(0, 0, 0, 0.92) 0%,
+    rgba(0, 0, 0, 0.78) 24%,
+    rgba(0, 0, 0, 0.4) 62%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-image: linear-gradient(
+    270deg,
+    rgba(0, 0, 0, 0.92) 0%,
+    rgba(0, 0, 0, 0.78) 24%,
+    rgba(0, 0, 0, 0.4) 62%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.section-grid-fade-top{
+  -webkit-mask-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.92) 0%,
+    rgba(0, 0, 0, 0.76) 28%,
+    rgba(0, 0, 0, 0.32) 64%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.92) 0%,
+    rgba(0, 0, 0, 0.76) 28%,
+    rgba(0, 0, 0, 0.32) 64%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.section-grid-fade-bottom{
+  -webkit-mask-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.92) 0%,
+    rgba(0, 0, 0, 0.76) 28%,
+    rgba(0, 0, 0, 0.32) 64%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.92) 0%,
+    rgba(0, 0, 0, 0.76) 28%,
+    rgba(0, 0, 0, 0.32) 64%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
 
 /* Botão padrão com brilho sutil e lift */
 .ctaButton {

@@ -65,8 +65,15 @@ export default function About() {
 
   return (
     <>
-      <section id="about" ref={sectionRef} className="py-20 bg-CinzaP">
-        <div className="maxW flex flex-col-reverse justify-center items-center gap-15 lg:flex-row">
+      <section
+        id="about"
+        ref={sectionRef}
+        className="relative overflow-hidden bg-CinzaP py-20"
+      >
+        <div className="section-grid-pattern section-grid-primary section-grid-fade-left" />
+        <div className="section-grid-pattern section-grid-secondary section-grid-fade-left" />
+
+        <div className="relative z-10 maxW flex flex-col-reverse justify-center items-center gap-15 lg:flex-row">
           
           {/* IMAGEM */}
           <div className="lg:w-1/2">
@@ -196,7 +203,9 @@ export default function About() {
           </div>
         </div>
 
-        <LineAbout />
+        <div className="relative z-10">
+          <LineAbout />
+        </div>
       </section>
     </>
   );
