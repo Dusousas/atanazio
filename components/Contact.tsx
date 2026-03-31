@@ -15,10 +15,10 @@ export default function Contact() {
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
 
-          <div className="maxW relative overflow-hidden">
+         
             <div className="section-grid-pattern section-grid-primary section-grid-soft section-grid-fade-bottom" />
             <div className="section-grid-pattern section-grid-secondary section-grid-soft section-grid-fade-bottom" />
-
+ <div className="maxW relative overflow-hidden">
             <article className="relative z-10 py-20 flex flex-col justify-center items-center gap-20 lg:flex-row">
               <div className="lg:w-1/2">
                 <h3 className="uppercase text-sm text-AmareloP text-center lg:text-left">
