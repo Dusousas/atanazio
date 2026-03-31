@@ -25,10 +25,10 @@ export default function Contact() {
                   Entre em contato
                 </h1>
                 <p className="font-extralight text-sm  mt-4 text-gray-300 text-center lg:text-left">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. In,
-                  distinctio doloribus? Culpa veritatis asperiores ipsam, harum
-                  nihil ab sit animi doloremque. Amet, quos qui eius possimus
-                  nam repellendus consequuntur est!
+                  Estamos prontos para entender a sua necessidade e indicar a
+                  melhor solução em terraplanagem, limpeza de terrenos,
+                  demolição e serviços com máquinas. Preencha o formulário ou
+                  fale com a nossa equipe para solicitar um orçamento.
                 </p>
                 <Form />
               </div>
@@ -110,10 +110,13 @@ export default function Contact() {
 
                 <div className="flex">
                   <a
+                    className="absolute bottom-4 left-10 inline-flex items-center gap-3 text-sm text-white transition-colors hover:text-AmareloP"
                     target="_blank"
                     href="https://www.instagram.com/atanazioterraplanagem/"
+                    rel="noreferrer"
                   >
-                    <FaInstagramSquare className="absolute bottom-4 left-10 text-2xl text-AmareloP" />
+                    <FaInstagramSquare className="text-2xl text-AmareloP" />
+                    <span>@atanazioterraplanagem</span>
                   </a>
                 </div>
               </div>
