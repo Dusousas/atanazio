@@ -1,16 +1,34 @@
 "use client";
 
-import React from "react";
-
 const partners = [
-  "RAÍZEN",
-  "BALDAN AGROPECUÁRIA",
-  "BRASILAGRO",
-  "CITROSUCO",
-  "RESORT RECANTO ALVORADA",
-  "GRUPO DERKS",
-  "RACEVILLE SPEED CLUB",
-  "BIOBROTAS",
+  {
+    src: "/empresas/Baldan.webp",
+    alt: "Baldan",
+  },
+  {
+    src: "/empresas/biobrotas.png",
+    alt: "Biobrotas",
+  },
+  {
+    src: "/empresas/brasil-agro.png",
+    alt: "Brasil Agro",
+  },
+  {
+    src: "/empresas/citrosuco.png",
+    alt: "Citrosuco",
+  },
+  {
+    src: "/empresas/race.webp",
+    alt: "Raceville Speed Club",
+  },
+  {
+    src: "/empresas/raizen.webp",
+    alt: "Raízen",
+  },
+  {
+    src: "/empresas/recanto.png",
+    alt: "Resort Recanto Alvorada",
+  },
 ];
 
 export default function Partners() {
@@ -19,33 +37,27 @@ export default function Partners() {
   return (
     <section
       id="partners"
-      className="overflow-hidden border-y-2 border-white bg-CinzaP py-20"
+      className="overflow-hidden border-y border-white/12 bg-CinzaP py-10 lg:py-12"
     >
-      <div className="maxW">
-        <div className="mx-auto max-w-4xl text-center">
-          <h3 className="text-AmareloP text-sm uppercase tracking-[0.22em]">
-            Parceiros
-          </h3>
-
-          <h2 className="mt-2 text-center text-4xl font-semibold uppercase tracking-wider text-white">
-            Empresas que já confiaram
-          </h2>
-        </div>
-      </div>
-
-      <div className="relative mt-14">
-        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-24 bg-gradient-to-r from-CinzaP to-transparent" />
-        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-24 bg-gradient-to-l from-CinzaP to-transparent" />
+      <div className="relative">
+        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-24 bg-gradient-to-r from-CinzaP via-CinzaP/85 to-transparent lg:w-32" />
+        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-24 bg-gradient-to-l from-CinzaP via-CinzaP/85 to-transparent lg:w-32" />
 
         <div className="marquee">
           <div className="marquee-track">
             {marqueeItems.map((partner, index) => (
-              <span
-                key={`${partner}-${index}`}
-                className="mx-10 inline-flex shrink-0 items-center text-lg font-semibold uppercase tracking-[0.18em] text-white transition duration-300 hover:text-white/50 lg:text-2xl"
+              <div
+                key={`${partner.src}-${index}`}
+                className="mx-3 flex h-24 w-[190px] shrink-0 items-center justify-center rounded-[22px] border border-white/8 bg-white/[0.02] px-6 transition-transform duration-300 hover:-translate-y-1 hover:border-AmareloP/30 lg:mx-4 lg:h-28 lg:w-[220px] lg:px-8"
               >
-                {partner}
-              </span>
+                <img
+                  src={partner.src}
+                  alt={partner.alt}
+                  className="max-h-12 w-full object-contain opacity-90 lg:max-h-14"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
             ))}
           </div>
         </div>
@@ -61,7 +73,7 @@ export default function Partners() {
           display: flex;
           align-items: center;
           width: max-content;
-          animation: marquee 26s linear infinite;
+          animation: marquee 24s linear infinite;
           will-change: transform;
         }
 
