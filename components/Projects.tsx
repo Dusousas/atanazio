@@ -18,10 +18,18 @@ const PROJETOS = [
     src: "/galeriahome/FIMI0343.JPEG",
     alt: "Galeria Atanazio 2",
   },
-  {
-    src: "/galeriahome/FIMI0372.JPEG",
-    alt: "Galeria Atanazio 3",
+    {
+    src: "/img-1.JPEG",
+    alt: "Galeria Atanazio 2",
   },
+      {
+    src: "/img-2.JPG",
+    alt: "Galeria Atanazio 2",
+  },
+  // {
+  //   src: "/galeriahome/FIMI0372.JPEG",
+  //   alt: "Galeria Atanazio 3",
+  // },
   {
     src: "/galeriahome/IMG_0121.JPEG",
     alt: "Galeria Atanazio 4",
@@ -29,10 +37,6 @@ const PROJETOS = [
   {
     src: "/galeriahome/IMG_2756.JPEG",
     alt: "Galeria Atanazio 5",
-  },
-  {
-    src: "/galeriahome/IMG_6144.JPEG",
-    alt: "Galeria Atanazio 6",
   },
 ];
 

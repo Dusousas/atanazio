@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from "react";
 import type { IconType } from "react-icons";
 import {
   FaTractor,
-  FaWrench,
+  FaTree,
   FaTruck,
   FaWater,
   FaMountain,
@@ -76,7 +76,7 @@ const LineAbout: React.FC = () => {
     { number: 2, title: "Limpeza e construção de represa", Icon: FaWater },
     { number: 3, title: "Infraestrutura e pavimentação", Icon: FaTools },
     { number: 4, title: "Curvas de nível", Icon: FaMountain },
-    { number: 5, title: "Destocas", Icon: FaWrench },
+    { number: 5, title: "Destocas", Icon: FaTree },
     { number: 6, title: "Demolições", Icon: FaTruck },
     { number: 7, title: "Locação de máquinas leves e pesadas", Icon: FaTools },
   ];
