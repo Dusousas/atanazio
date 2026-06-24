@@ -5,11 +5,11 @@ import type { IconType } from "react-icons";
 import {
   FaTractor,
   FaTree,
-  FaTruck,
   FaWater,
   FaMountain,
   FaTools,
 } from "react-icons/fa";
+import { GiBulldozer, GiWreckingBall } from "react-icons/gi";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
@@ -77,8 +77,8 @@ const LineAbout: React.FC = () => {
     { number: 3, title: "Infraestrutura e pavimentação", Icon: FaTools },
     { number: 4, title: "Curvas de nível", Icon: FaMountain },
     { number: 5, title: "Destocas", Icon: FaTree },
-    { number: 6, title: "Demolições", Icon: FaTruck },
-    { number: 7, title: "Locação de máquinas leves e pesadas", Icon: FaTools },
+    { number: 6, title: "Demolições", Icon: GiWreckingBall },
+    { number: 7, title: "Locação de máquinas leves e pesadas", Icon: GiBulldozer },
   ];
 
   return (
